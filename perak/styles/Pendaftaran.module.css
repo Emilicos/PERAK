@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+.container {
+    padding: 0 7.5625rem;
+}
+
+.p{ 
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title{
+    max-width: 617px;
+    font-size: 3.5rem;
+    line-height: 4.875rem;
+    color:#6A7CC8;
+    font-weight:900;
+}
+
+.pilih{
+    color:#ffff;
+    font-size:2rem;
+    line-height: 0;
+    letter-spacing: 0.05em;
+}
+
+.games{
+    display:flex;
+    flex-wrap:wrap;
+    cursor:pointer;
+}
+
+.brawlhalla_game, .osu_game, .chess_game{
+    transition:transform 0.5s;
+    border-radius: 8px;
+    margin: 2em 4em 2em 0em;
+}
+
+.brawlhalla_game{
+    padding: 2.5em 2em 2.5em 2.5em;
+    background-color: #028F4D;
+    box-shadow: 
+    0 0 0 10px #03BF67,
+    0 0 0 14px black;
+}
+
+.osu_game{
+    padding: 1em 3em 1em 3.5em;   
+    background-color: #2E1145;
+    box-shadow: 
+    0 0 0 10px #8648BA,
+    0 0 0 14px black;
+}
+
+.chess_game{
+    padding: 2em 4em 2em 4em;
+    background-color: #2E1145;
+    box-shadow: 
+    0 0 0 10px #8648BA,
+    0 0 0 14px black;
+}
+
+.brawlhalla_game:hover, .osu_game:hover, .chess_game:hover{
+    transform: translateY(-15px);
+}
+
