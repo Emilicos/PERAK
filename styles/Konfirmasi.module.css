@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap');
+
+.container {
+    margin: 0 2em;
+}
+
+.parent{
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.child{
+    position:absolute;
+    top:30%;
+    left:26.5%;
+    width:45%;
+}
+
+.container {
+    margin: 0 2em;
+}
+
+.p{
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title{
+    color: #6A7CC8;
+    font-size:4rem;
+    font-weight:700;
+}
+
+.category{
+    color:#FFFFFF;
+    font-size:2.25rem;
+    line-height:0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:700;
+}
+
+.limit{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.limit p{
+    font-size:3rem;
+    font-weight:bold;
+}
+.rekening{
+    display:flex;
+    flex-direction: column;
+}
+
+.limit a{
+    font-size:2.25rem;
+    font-weight: 500;
+    margin-top:0.2em;
+}
+
+.profile_picture{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    grid-template-areas: "picture data";
+    margin-left:0.5em;
+    grid-gap:3em;
+}
+
+.image{
+    grid-area: picture;
+    position:relative;
+    display:block;
+}
+
+.place_image{
+    position:absolute;
+    top:22.5%;
+    left:15%;
+}
+
+.image_2{
+    background-color: #2E1145;
+    box-shadow: 
+    0 0 0 10px #8648BA,
+    0 0 0 14px black;
+    border-radius: 8px;
+    margin-top: 2em;
+    max-width: 1fr;
+    height:0;
+    padding-top:100%;
+    min-width:20em;
+}
+
+.gambar{
+    width:225px;
+    height:225px;
+}
+
+.info{
+    grid-area:data;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+
+.daftar{
+    margin: 5em 0;
+    width:98%;
+    box-shadow: 
+    0 0 0 10px #03F182,
+    0 0 0 14px black;
+    border-radius: 0.1em;
+}
+
+.daftar button{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #028F4D;
+    padding: 14px 28px;
+    font-size: 3rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.1em;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.5s;
+    font-weight:700;
+}
+
+.daftar button:hover{  
+    background-color: rgb(15, 180, 120);
+}
+
+
+@media (min-width: 67.5rem) {
+    .container {
+        padding: 0 7.5625rem;
+    }
+
+    .img{
+        position:absolute;
+        top:300px;
+        left:850px;
+    }
+
+    .parent{
+        position:relative;
+        display:block;
+        width:100%;
+    }
+
+    .child{
+        position:absolute;
+        top:25%;
+        left:15%;
+        width:70%;
+    }
+    
+    .limit{
+        width:45rem;
+    }
+
+    .limit p{
+        font-size:1.5rem;
+    }
+    .limit a{
+        font-size:1.25rem;
+    }
+
+    .image_2{
+        height:16rem;
+    }
+
+    .daftar button{
+        font-size:1rem;
+    }
+    
+}

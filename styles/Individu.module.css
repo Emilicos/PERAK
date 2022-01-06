@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+.parent{
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.child{
+    position:absolute;
+    top:30%;
+    left:26.5%;
+    width:45%;
+}
+
+.container {
+    margin: 0 2em;
+}
+
+.p{
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title{
+    color: #6A7CC8;
+    font-size:4rem;
+}
+
+.category{
+    color:#FFFFFF;
+    font-size:3rem;
+    line-height:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.p_biaya_1{
+    font-size:3rem;
+    font-weight: bold;
+}
+
+.p_biaya_2{
+    font-weight:500;
+    font-size:1.75rem;
+}
+
+.radio{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-top:2em;
+}
+
+.stados, .mahasiswa{
+    display: block;
+    position: relative;
+    padding-left: 2em;
+    padding-top: 0.25em;
+    margin-bottom: 0.75em;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.stados:hover, .mahasiswa:hover{
+    text-decoration: underline;
+}
+
+.stados input[type='radio'], .mahasiswa input[type='radio']{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+.checkmark_mahasiswa, .checkmark_stados{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    border: 4px solid black;
+}
+
+.checkmark_stados{
+    background-color: #03BF67;
+}
+
+.checkmark_mahasiswa{
+    background-color: #F54A39;
+}
+
+.stados:hover input[type='radio'] ~ .checkmark_stados{
+    background-color: rgb(6, 205, 130);
+}
+
+.mahasiswa:hover input[type='radio'] ~ .checkmark_mahasiswa{
+    background-color: rgb(260, 90, 80);
+}
+.checkmark_stados:after, .checkmark_mahasiswa:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.stados input[type='radio']:checked ~ .checkmark_stados:after, .mahasiswa input[type='radio']:checked ~ .checkmark_mahasiswa:after {
+    display: block;
+}
+  
+.stados .checkmark_stados:after {
+    top: 6.5px;
+    left: 7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
+}
+
+.mahasiswa .checkmark_mahasiswa:after{
+    top: 6.5px;
+    left: 7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
+}
+
+
+.nama_panjang, .nama_panggilan, .npm, .linewa{
+    display:flex;
+    flex-direction: column;
+    margin-top:1.5em;
+}
+
+.entry{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.entry input[type=text], .entry input[type=number], .entry input[type=url]{
+    border: 4px solid black;
+    border-radius:6px;
+    height:49px;
+    background-color: #FBFBFB;
+    margin-top:0.5em;
+    padding-left:1em;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.grid{  
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto min-content;
+    grid-template-areas: "picture ."
+    "upload pilih";
+    margin-left:0.5em;
+    grid-gap:3em;
+}
+
+.image{
+    grid-area:picture;
+    position:relative;
+    display:block;
+}
+
+.image_2{
+    max-width: 1fr;
+    height:0;
+    padding-top:100%;
+    background-color: #2E1145;
+    box-shadow: 
+    0 0 0 10px #8648BA,
+    0 0 0 14px black;
+    border-radius: 8px;
+}
+
+.place_image{
+    position:absolute;
+    top:5%;
+    left:5%;
+}
+
+.gambar{
+    width:225px;
+    height:225px;
+}
+
+.p_hilang{
+    display:none;
+}
+
+.masukin{
+    grid-area: pilih;
+    display:flex;
+    flex-direction: column;
+}
+
+.attachment{
+    grid-area:upload;
+    width: 1fr;
+    box-shadow: 
+    0 0 0 10px #F1D78E,
+    0 0 0 14px black;
+    border-radius: 4px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.input::-webkit-file-upload-button {
+    display:none;
+}
+
+.input::before {
+    content: 'Pilih Gambar';
+    font-family: 'Montserrat', sans-serif;
+    display:inline-block;
+    width:98.6%;
+    background-color:#CC9D1A;
+    padding:0.5em 0;
+    border:2.5px solid black;
+    font-size: 1.2rem;
+    border-radius:4px;
+    cursor:pointer;
+    text-align: center;
+    transition: background-color 1s;
+}
+
+.input:hover::before {
+    border-color: black;
+    background-color: rgb(225, 180, 50);
+}
+
+.daftar{
+    margin: 5em 0;
+    width:98%;
+    box-shadow: 
+    0 0 0 10px #03F182,
+    0 0 0 14px black;
+    border-radius: 0.1em;
+}
+
+.daftar button{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #028F4D;
+    padding: 14px 28px;
+    font-size: 3rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.1em;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.5s;
+}
+
+.daftar button:hover{  
+    background-color: rgb(15, 180, 120);
+}
+
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.popup h1{
+    color: #6A7CC8;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+.box{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    text-align: center;
+    background-color: #E5B632;
+    padding:0 8%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:0.5em;
+}
+
+.double_btn{
+    display:flex;
+    flex-direction:column;
+    font-size:2.25rem;
+    color:white;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 2em 0;
+}
+
+.btn_1{
+    box-shadow: 
+    0 0 0 10px #FAA299,
+    0 0 0 14px black;
+    border-radius: 0.1em;
+    margin: 0 0em 1em 0;
+}
+
+.btn_2{
+    box-shadow: 
+    0 0 0 10px #03F182,
+    0 0 0 14px black;
+    border-radius: 0.1em;
+}
+
+.btn_1 button{
+    display: block;
+    width: 325px;
+    border: none;
+    background-color: #EE200C;
+    padding: 14px 28px;
+    text-align: center;
+    border-radius: 0.1em;
+}
+
+.btn_2 button{
+    display: block;
+    width: 325px;
+    border: none;
+    background-color: #028F4D;
+    padding: 14px 28px;
+    text-align: center;
+    border-radius: 0.1em;
+}
+
+.btn_1 button:hover{
+    background-color: rgb(270, 50, 30);
+}
+
+@media (min-width: 67.5rem) {
+    .img{
+        position:absolute;
+        top:300px;
+        left:850px;
+    }
+
+    .parent{
+        position:relative;
+        display:block;
+        width:100%;
+    }
+
+    .child{
+        position:absolute;
+        top:25%;
+        left:15%;
+        width:70%;
+    }
+
+    .container {
+        padding: 0 7.5625rem;
+    }
+
+    .category{
+        font-size:2.25rem;
+    }
+
+    .form{
+        width: 671px;
+    }
+
+    .p_biaya_1{
+        font-size:1.125rem;
+    }
+    
+    .p_biaya_2{
+        font-size:1.125rem;
+    }
+
+    .radio{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size:1.25rem;
+    }
+
+    .stados{
+        display:flex;
+        align-items: center;
+    }
+
+    .mahasiswa{
+        display:flex;
+        align-items: center;
+    }
+
+    .entry{
+        font-size: 1.25rem;
+    }
+    
+    .grid{        
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto min-content;
+        grid-template-areas: "picture pilih"
+        "upload .";
+    }
+
+    .attachment{
+        grid-area: upload;
+        width:16rem;
+    }
+    
+    .image_2{
+        height:16rem;
+    }
+
+    .masukin{
+        grid-area: pilih;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .p_hilang{
+        display:initial;
+    }
+
+    .input::before {
+        content: 'Upload Files';
+        font-size: 1.235rem;
+    }
+    
+    .daftar button{
+        font-size:1rem;
+    }
+
+    .popup h1{
+        font-size:3.5rem;
+    }
+
+    .popup p{
+        font-size:1.5rem;
+    }
+    
+    .double_btn{
+        flex-direction:row;
+    }
+
+    .btn_1{
+        margin: 0 1.5em 0em 0;
+    }
+
+    
+}
